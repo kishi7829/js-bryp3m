@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* ------------------------
+* システムエラーのデザイン
+* ※編集不可※
+* ------------------------*/
+.systemMessageArea {
+  padding: 10px;
+  border: solid 1px #ee7800;
+  background-color: #fff3b8;
+}
+.systemMessageArea h3 {
+  font-size: medium;
+}
+.systemMessageArea p {
+  font-size: small;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>システム名</title>
+
+    <script>
+      //データベース構築エリア ---------------------------
+      let dbColumns = [
+        //↓↓ ここから編集可
+        { columnId: "ac", columnName: "受取日", required: "Y" },
+        { columnId: "product_name", columnName: "商品名", required: "Y" },
+        { columnId: "customer_name", columnName: "顧客名", required: "Y" },
+        { columnId: "branch_name", columnName: "店舗名", required: "Y" },
+        { columnId: "cellphone_number", columnName: "電話番号", required: "Y" },
+        { columnId: "booked_day", columnName: "予約日", required: "Y" },
+        { columnId: "remarks", columnName: "備考", required: "N" },
+
+        //↑↑ ここまで編集可
+      ];
+      window.dbColumns = dbColumns;
+    </script>
+  </head>
+
+  <body>
+    <!-- ↓↓ ここから編集可 -->
+    <h1>予約管理システム</h1>
+    <h2>予約登録フォーム</h2>
+    <!-- ↑↑ ここまで編集可 -->
+
+    <div class="formArea">
+      <!-- ↓↓ ここから編集可 -->
+      <p>受取日（必須）：<br /><input type="text" id="ac" value="" /></p>
+      <p>商品名（必須）：<br /><input type="text" id="product_name" value="" /></p>
+      <p>顧客名（必須）：<br /><input type="text" id="customer_name" value="" /></p>
+      <p>店舗名（必須）：<br /><input type="text" id="branch_name" value="" /></p>
+      <p>電話番号（必須）：<br /><input type="text" id="cellphone_number" value="" /></p>
+      <p>予約日（必須）：<br /><input type="text" id="booked_day" value="" /></p>
+      <p>備考<br /><input type="text" id="remarks" value="" /></p>
+      <!-- ↑↑ ここまで編集可 -->
+
+      <input type="hidden" id="id" value="" />
+      <p>
+        <input type="button" value="新規登録" id="btn_create" class="btnCreate" onClick="recordCreate();" />
+        <input type="button" value="更新" id="btn_update" class="btnUpdate" onClick="recordUpdate();" />
+        <input type="button" value="削除" id="btn_delete" class="btnDelete" onClick="recordDelete();" />
+        <input type="button" value="選択解除" id="btn_release" class="btnRelease" onClick="recordRelease();" />
+      </p>
+      <div id="error_message_area" class="errorMessageArea"></div>
+    </div>
+
+    <!-- ↓↓ ここから編集可 -->
+    <h2>予約一覧</h2>
+    <!-- ↑↑ ここまで編集可 -->
+
+    <div id="list_area" class="listArea"></div>
+  </body>
+</html>
